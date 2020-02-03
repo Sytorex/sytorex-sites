@@ -1,0 +1,205 @@
+.conteneur
+{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: white; /*couleur du texte*/
+    font-family: "Times New Roman"; /*format du texte*/
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top right;
+    
+}
+
+    .section
+    {
+        width: 70%;
+        height: 754px;
+    }
+    .section_contact{
+        width: 100%;
+        height: 754px;
+    } 
+        .titre{
+        width: 100%;
+        }
+    
+        h1  { 
+        color: black; /* couleur à écrire en anglais qui modifie le (nom de l'entreprise)*/
+        font-size: xx-large;
+        }
+
+        h2{
+            color: white; /*couleur a écrire en anglais pour le slogan*/        
+        }
+
+        h3{
+        font-weight: bold;
+        text-decoration: underline;
+        color:blue;
+        font-size: 2.5em;
+        }
+
+        p{
+        color:white; /*couleur du texte en générale (il faudras toujour le mettre en anglais, je ne le répéterai plus)*/
+        font-size: x-large;
+        font-style: italic;
+        }
+
+        a:visited{
+        color:white;
+        }
+
+        body
+        {   
+            background-color: rgb(199, 196, 196);
+            background-size: 100% ;
+            margin:0;
+            padding:0;
+            position:relative;
+            z-index:-1;
+        }
+        
+        /* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1311px */
+        @media all and (max-width: 1311px)
+        {
+        body
+            {
+                background: url(images/bg_ico_aside/bg.png) no-repeat center fixed;
+                background-size: cover;
+            }
+        }
+ 
+        /* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 1024px et 1280px */
+        @media all and (min-width: 1024px) and (max-width: 2000px)
+        {
+        body 
+            {
+                background: url(images/bg_ico_aside/bg.png) no-repeat center fixed;
+            background-size: cover;
+            }
+        }
+
+        strong
+        {
+            color: black; /*couleur de la page du "notre produit" en dessous du  Notre Produit*/
+            font-size: xx-large;
+        } 
+
+        .prix
+        {
+            color: red; /*Couleur du prix*/
+            font-size: 1.75em; /*Taille du prix*/
+            font-weight: bold; /*Mit en gras*/
+        }
+
+        .photo_produit
+
+        {
+            font-size: x-large;
+            flex-direction: column; 
+        }
+
+        .tablette
+        {
+            display: none;
+        }
+
+        .img_pc
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .img_produit
+        {
+            padding-top: 50px;
+        }
+.aside_index, .aside_produit {
+    position: relative;
+    float: left;
+    width: 30%;
+    height: 754px;
+    background-color: rgba(0,32,96,0.75);
+    z-index: 3;
+}
+
+    .aside_index a:link, .aside_produit a:link, .aside a:visited, .aside_produit a:visited
+    {
+        color: white /*couleur des liens sur la partie du côté*/
+    }
+
+
+        .coordonnees
+
+        {
+            height: 12%;
+        }
+
+        .evenement
+        {
+            height: 0px;
+            padding-top: 175px;
+        }
+
+        .hidden2
+        {
+            visibility: hidden;
+        }
+
+        .slider_tel, .img_tel
+        {
+            display: none;
+        }
+
+        
+@media all and (max-width: 1311px)
+{
+    .aside_index
+    {
+        display: none;
+    }
+
+    .tablette
+    {
+        display: inline;
+    }
+
+    .section
+    {   
+        width: 82%;
+    }
+}
+
+@media all and (max-width: 1011px) /*Format du tel*/
+{
+    .tablette, .aside_produit, #slider_pc, .img_pc
+    {
+        display: none;
+    }
+
+    .slider_tel, .section_team
+    {   
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #section_tel
+    {
+        position: relative;
+        top:20px;
+        left:35px;
+        z-index: 1;
+    }    
+    .img_tel
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .tel
+    {
+        display: inline;
+    }
+}
